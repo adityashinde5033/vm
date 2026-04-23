@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>KetoyVM · Server-Driven UI Runtime for Android · Ship Kotlin, Update in Seconds</title>
-<meta name="description" content="KetoyVM is a Kotlin execution runtime for Android that lets you ship Jetpack Compose, coroutines, ViewModels, Hilt, Room and Navigation inside a .ktx bundle. Push app updates over-the-air to every device in 60 seconds — no Play Store round-trip, no DSL, no schema. The Hermes of Kotlin and Compose." />
+<meta name="description" content="KetoyVM is a Kotlin execution runtime for Android that lets you ship Jetpack Compose, coroutines, ViewModels, Hilt, Room and Navigation inside a .ktx bundle. Push app updates over-the-air to every device in 60 seconds without Play Store round-trip, DSL, or schema. The Hermes of Kotlin and Compose." />
 <meta name="keywords" content="KetoyVM, Ketoy VM, Server Driven UI, Server-Driven UI Android, Remote Compose, Jetpack Compose runtime, Kotlin execution runtime, Android code push, OTA Android updates, ship app updates in seconds, ship app updates quickly, skip Play Store review, Android over the air updates, Compose over the air, Kotlin bundle, .ktx bundle, Ketoy Bytecode, KBC, Hermes for Kotlin, React Native alternative Android, mobile code push, instant app updates, CodePush Kotlin, SDUI, server driven UI framework, Kotlin DSL free, Android runtime, Android CI CD, continuous delivery Android, hot reload Android, feature flags Android, remote rendering Android, Jetpack Compose server driven" />
 <meta name="author" content="KetoyVM" />
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -18,18 +18,18 @@
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="KetoyVM" />
 <meta property="og:title" content="KetoyVM · Server-Driven UI Runtime for Android" />
-<meta property="og:description" content="Ship plain Kotlin. Jetpack Compose, coroutines, ViewModels, Hilt, Room, Navigation — inside a .ktx bundle. Push updates to every Android device in 60 seconds. No Play Store. No DSL." />
+<meta property="og:description" content="Ship plain Kotlin with Jetpack Compose, coroutines, ViewModels, Hilt, Room, and Navigation inside a .ktx bundle. Push updates to every Android device in 60 seconds. No Play Store. No DSL." />
 <meta property="og:url" content="https://ketoyvm.com/" />
 <meta property="og:image" content="https://ketoyvm.com/assets/vol-img.png" />
-<meta property="og:image:alt" content="KetoyVM — a Kotlin execution runtime for Android, named for a volcanic island in the Kurils" />
+<meta property="og:image:alt" content="KetoyVM: a Kotlin execution runtime for Android, named for a volcanic island in the Kurils" />
 <meta property="og:locale" content="en_US" />
 
 <!-- Twitter / X -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="KetoyVM · Server-Driven UI Runtime for Android" />
-<meta name="twitter:description" content="Ship plain Kotlin, update every Android device in 60 seconds. Full Jetpack Compose, Coroutines, Hilt, Room — delivered as a .ktx bundle. No Play Store round-trip." />
+<meta name="twitter:description" content="Ship plain Kotlin, update every Android device in 60 seconds. Full Jetpack Compose, Coroutines, Hilt, Room delivered as a .ktx bundle. No Play Store round-trip." />
 <meta name="twitter:image" content="https://ketoyvm.com/assets/vol-img.png" />
-<meta name="twitter:image:alt" content="KetoyVM — Kotlin execution runtime for Android" />
+<meta name="twitter:image:alt" content="KetoyVM: Kotlin execution runtime for Android" />
 
 <link rel="icon" href="assets/ketoy_logo.png" />
 <link rel="apple-touch-icon" href="assets/ketoy_logo.png" />
@@ -47,7 +47,7 @@
       "name": "KetoyVM",
       "applicationCategory": "DeveloperApplication",
       "operatingSystem": "Android",
-      "description": "KetoyVM is a Kotlin execution runtime for Android. It lets teams ship Jetpack Compose, Coroutines, ViewModels, Hilt, Room and Navigation over-the-air as a .ktx bundle — updating every device in about 60 seconds without a Play Store release.",
+      "description": "KetoyVM is a Kotlin execution runtime for Android that lets teams ship Jetpack Compose, Coroutines, ViewModels, Hilt, Room and Navigation over-the-air as a .ktx bundle, updating every device in about 60 seconds without a Play Store release.",
       "url": "https://ketoyvm.com/",
       "image": "https://ketoyvm.com/assets/vol-img.png",
       "softwareVersion": "0.4",
@@ -73,7 +73,7 @@
           "name": "What is KetoyVM?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "KetoyVM is a Kotlin execution runtime for Android that runs Ketoy Bytecode compiled from plain Kotlin source — Jetpack Compose, coroutines, ViewModels, Hilt, Room and Navigation — delivered as a .ktx bundle."
+            "text": "KetoyVM is a Kotlin execution runtime for Android that runs Ketoy Bytecode compiled from plain Kotlin source, including Jetpack Compose, coroutines, ViewModels, Hilt, Room and Navigation, delivered as a .ktx bundle."
           }
         },
         {
@@ -81,7 +81,7 @@
           "name": "How do I ship Android app updates in seconds?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Write Kotlin, run ./gradlew ketoyBundle, upload the resulting .ktx to Ketoy Cloud, and the KetoyRuntime on every device fetches and executes the new bundle in about 60 seconds — no Play Store review, no binary split."
+            "text": "Write Kotlin, run ./gradlew ketoyBundle, upload the resulting .ktx to Ketoy Cloud, and the KetoyRuntime on every device fetches and executes the new bundle in about 60 seconds without Play Store review or binary split."
           }
         },
         {
@@ -89,7 +89,7 @@
           "name": "Is KetoyVM a server-driven UI framework?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "KetoyVM is stronger than a server-driven UI DSL: it executes real Kotlin on device with native Jetpack Compose rendering, real coroutine semantics and real ViewModel lifecycles — so you keep full-surface Compose without a custom schema."
+            "text": "KetoyVM is stronger than a server-driven UI DSL: it executes real Kotlin on device with native Jetpack Compose rendering, real coroutine semantics and real ViewModel lifecycles, so you keep full-surface Compose without a custom schema."
           }
         },
         {
@@ -97,7 +97,7 @@
           "name": "Is this like CodePush or Hermes?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "What Hermes is to React Native's JavaScript, KetoyVM is to Kotlin and Compose — a purpose-built execution runtime, not a script interpreter wedged into a different stack."
+            "text": "What Hermes is to React Native's JavaScript, KetoyVM is to Kotlin and Compose: a purpose-built execution runtime, not a script interpreter wedged into a different stack."
           }
         }
       ]
@@ -523,7 +523,7 @@
       <em>Rewrite</em> <span class="ember">anytime.</span>
     </h1>
     <p class="hero-sub">
-      KetoyVM executes plain Kotlin — full Jetpack Compose, coroutines, ViewModels, Hilt, Room, Navigation — from a <span class="mono" style="color:var(--ember-2)">.ktx</span> bundle. Push a new build to every device in 60 seconds. No Play Store round-trip. No DSL. No schema.
+      KetoyVM executes plain Kotlin with full Jetpack Compose, coroutines, ViewModels, Hilt, Room, and Navigation inside a <span class="mono" style="color:var(--ember-2)">.ktx</span> bundle. Push a new build to every device in 60 seconds. No Play Store round-trip. No DSL. No schema.
     </p>
     <div class="hero-cta">
       <a href="#waitlist" class="btn primary">Join the waitlist <span class="arrow">→</span></a>
@@ -589,13 +589,13 @@
     <div class="flow-step">
       <div class="idx">STEP 01</div>
       <h3>Author</h3>
-      <p>Write <span class="mono">CheckoutScreen.kt</span> — a LazyColumn, a ViewModel, Retrofit calls, Hilt repositories. Exactly the Kotlin you'd write today.</p>
+      <p>Write <span class="mono">CheckoutScreen.kt</span> with a LazyColumn, a ViewModel, Retrofit calls, and Hilt repositories. Exactly the Kotlin you'd write today.</p>
       <div class="glyph">→ CheckoutScreen.kt</div>
     </div>
     <div class="flow-step">
       <div class="idx">STEP 02</div>
       <h3>Compile</h3>
-      <p>The KetoyVM compiler plugin lowers your Kotlin to <span class="mono">KBC</span> — Ketoy Bytecode — server-side. Compose, coroutines, DI, all preserved.</p>
+      <p>The KetoyVM compiler plugin lowers your Kotlin to Ketoy Bytecode (<span class="mono">KBC</span>) server-side. Compose, coroutines, DI, all preserved.</p>
       <div class="glyph">→ ./gradlew ketoyBundle</div>
     </div>
     <div class="flow-step">
@@ -607,7 +607,7 @@
     <div class="flow-step">
       <div class="idx">STEP 04</div>
       <h3>Execute</h3>
-      <p>The host app pulls the bundle. KetoyRuntime executes it natively — every Compose parameter, every coroutine scope, every Room query — in under 60s.</p>
+      <p>The host app pulls the bundle. KetoyRuntime executes it natively with every Compose parameter, every coroutine scope, and every Room query in under 60s.</p>
       <div class="glyph">→ KetoyRuntime.load()</div>
     </div>
   </div>
@@ -619,7 +619,7 @@
     <div class="label"><span class="num">02 / 04</span><span class="mono">THE RUNTIME</span></div>
     <h2>Everything you use. <em>Nothing</em> you'd compromise.</h2>
     <p class="lede">
-      KetoyVM is not a cross-platform abstraction. It is a Kotlin execution runtime. Components render natively through Jetpack Compose — every modifier, every parameter, every animation — with correct lifecycle semantics end to end.
+      KetoyVM is not a cross-platform abstraction. It is a Kotlin execution runtime. Components render natively through Jetpack Compose with every modifier, parameter, and animation—all with correct lifecycle semantics from end to end.
     </p>
   </div>
 
@@ -711,7 +711,7 @@
 
     <div class="code-aside">
       <div class="eyebrow">No DSL. No mapping. No schema.</div>
-      <h3>The same Kotlin file ships <em>three ways</em> — and none of them are a rewrite.</h3>
+      <h3>The same Kotlin file ships <em>three ways</em>, and none of them require a rewrite.</h3>
       <p>A native build. A bundled <span class="mono">.ktx</span> delivered over the air. A staged canary to 2% of your users. The compiler does the work; your source tree is untouched.</p>
       <div class="stream">
         <span style="color:var(--ember-2)">●</span>
@@ -735,7 +735,7 @@
     <div class="label"><span class="num">04 / 04</span><span class="mono">THE NAME</span></div>
     <h2>Named for an <em>uninhabited</em> volcano.</h2>
     <p class="lede">
-      Kotlin is named for an island in the Gulof of Finland. We took the same road south-east — across the Sea of Okhotsk to the Kurils — and named the runtime for a volcanic island no one lives on. Unmapped terrain. Built for explorers.
+      Kotlin is named for an island in the Gulf of Finland. We took the same road south-east, across the Sea of Okhotsk to the Kurils, and named the runtime for a volcanic island no one lives on. Unmapped terrain. Built for explorers.
     </p>
   </div>
 
@@ -785,12 +785,12 @@
       <div class="top">
         <div class="eyebrow">THE RUNTIME</div>
         <h3>KetoyVM <em>v0.4 · Alpha</em></h3>
-        <p>A Kotlin program execution runtime for Android — what Hermes is to React Native's JavaScript, KetoyVM is to Kotlin and Compose. Compiler plugin lowers your source to KBC. Host app loads the <span class="mono">.ktx</span> bundle. Runtime executes.</p>
+        <p>A Kotlin program execution runtime for Android. Like Hermes to React Native's JavaScript, KetoyVM is built for Kotlin and Compose. Compiler plugin lowers your source to KBC. Host app loads the <span class="mono">.ktx</span> bundle. Runtime executes.</p>
       </div>
       <div class="bottom">
         <div class="coord-block">
           <div><b>KIND</b>   Kotlin execution runtime · Android</div>
-          <div><b>BC</b>     KBC — Ketoy Bytecode</div>
+          <div><b>BC</b>     Ketoy Bytecode (KBC)</div>
           <div><b>PKG</b>    .ktx bundle</div>
           <div><b>RENDER</b> Native Jetpack Compose</div>
           <div><b>STAGE</b>  Alpha · by invitation</div>
@@ -805,7 +805,7 @@
   <div class="cta-inner">
     <div class="eyebrow" style="margin-bottom:24px">JOIN THE ALPHA · COHORT 01</div>
     <h2>The future of <em>Android</em><br/>is your app, rewritten.</h2>
-    <p>KetoyVM is in continuous alpha. If over-the-air Kotlin, Compose from a bundle, and 60-second deploys fascinate you — we're opening the next cohort by invitation.</p>
+    <p>KetoyVM is in continuous alpha. If over-the-air Kotlin, Compose from a bundle, and 60-second deploys interest you, we're opening the next cohort by invitation.</p>
 
     <form class="waitlist" id="wl" onsubmit="event.preventDefault(); joinList();">
       <div class="wl-row">
