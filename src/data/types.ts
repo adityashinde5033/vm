@@ -2,6 +2,7 @@ export type Author = {
   name: string;
   role?: string;
   bio?: string;
+  avatar?: string;
 };
 
 export type TableCell = { text: string; numeric?: boolean };

@@ -2,7 +2,10 @@ import { Fragment } from 'react';
 import Link from 'next/link';
 import type { AdjacentBlog, Blog, BlogBlock } from '@/data/types';
 import RichText from './RichText';
+import ShareBar from './ShareBar';
 import styles from '@/app/blogs/[slug]/post.module.css';
+
+const SITE = 'https://vm.ketoy.dev';
 
 type Props = {
   post: Blog;
@@ -237,16 +240,16 @@ export default function BlogPost({ post, adjacent }: Props) {
         <RichText as="h1" className={styles.title} html={post.title} />
         {post.dek && <RichText as="p" className={styles.dek} html={post.dek} />}
         <div className={styles.byline}>
-          <div className={styles.av} />
+          <div
+            className={styles.av}
+            style={post.author.avatar ? { backgroundImage: `url(${post.author.avatar})`, backgroundSize: 'cover', backgroundPosition: 'center' } : undefined}
+          />
           <div className={styles.who}>
             <b>{post.author.name}</b>
             {post.author.role && <span className={styles.role}>{post.author.role}</span>}
           </div>
           <div className={styles.spacer} />
-          <div className={styles.share}>
-            <button type="button">Copy link</button>
-            <button type="button">Share</button>
-          </div>
+          <ShareBar url={`${SITE}/blogs/${post.slug}`} title={post.title.replace(/<[^>]+>/g, '')} />
         </div>
       </header>
 
@@ -266,7 +269,10 @@ export default function BlogPost({ post, adjacent }: Props) {
 
         {post.author.bio && (
           <div className={styles.endnote}>
-            <div className={styles.av} />
+            <div
+              className={styles.av}
+              style={post.author.avatar ? { backgroundImage: `url(${post.author.avatar})`, backgroundSize: 'cover', backgroundPosition: 'center' } : undefined}
+            />
             <div className={styles.info}>
               <h5>{post.author.name}</h5>
               <p>{post.author.bio}</p>

@@ -28,6 +28,7 @@ const aditya = {
   name: 'Aditya',
   role: 'Founder · Ketoy',
   bio: 'Writes about the big picture of what KetoyVM does to teams and products.',
+  avatar: '/team/aditya%20Small.jpeg',
 };
 
 /**
