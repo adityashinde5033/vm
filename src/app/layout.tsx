@@ -72,7 +72,7 @@ const siteJsonLd = {
         'KetoyVM is a Kotlin execution runtime for Android that lets teams ship Jetpack Compose, Coroutines, ViewModels, Hilt, Room and Navigation over-the-air as a .ktx bundle, updating every device in about 60 seconds without a Play Store release.',
       url: 'https://vm.ketoy.dev/',
       image: 'https://vm.ketoy.dev/assets/vol-img.png',
-      softwareVersion: '0.4',
+      softwareVersion: '0.1',
       keywords:
         'KetoyVM, Server Driven UI, Remote Compose, Kotlin runtime, Android OTA updates, Jetpack Compose, code push, Ketoy Bytecode, .ktx bundle',
       offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD', availability: 'https://schema.org/PreOrder' },

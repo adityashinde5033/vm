@@ -83,7 +83,7 @@ export default function Footer({ variant = 'landing' }: Props) {
       </div>
 
       <div className="footbar">
-        <div>© 2026 KetoyVM · Alpha 0.4</div>
+        <div>© 2026 KetoyVM · Alpha 0.1</div>
         <div>47°20′N · 152°28′E · SEA OF OKHOTSK</div>
       </div>
     </footer>

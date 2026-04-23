@@ -26,8 +26,8 @@ const devrel = {
 
 const aditya = {
   name: 'Aditya',
-  role: 'Head of Developer Relations · KetoyVM',
-  bio: 'Head of Developer Relations at KetoyVM. Writes the founding posts and the occasional benchmark walkthrough.',
+  role: 'Founder · Ketoy',
+  bio: 'Writes about the big picture of what KetoyVM does to teams and products.',
 };
 
 /**
@@ -544,7 +544,7 @@ export const blogs: Blog[] = [
         type: 'table',
         caption: 'TABLE 01 · BENCHMARKS · PIXEL 6 · AOSP 15',
         captionNote: 'N = 1,000 RUNS',
-        headers: ['Metric', 'JVM class files', 'KBC v0.3', 'KBC v0.4', 'Δ'],
+        headers: ['Metric', 'JVM class files', 'KBC v0.3', 'KBC v0.1', 'Δ'],
         rows: [
           [{ text: 'Bundle size (gzip)' }, { text: '612 KB' }, { text: '284 KB' }, { text: '218 KB', numeric: true }, { text: '−64%', numeric: true }],
           [{ text: 'Parse + verify' }, { text: '168 ms' }, { text: '44 ms' }, { text: '21 ms', numeric: true }, { text: '−87%', numeric: true }],
@@ -596,7 +596,7 @@ export const blogs: Blog[] = [
         type: 'callout',
         tag: 'KNOWN ISSUE',
         html:
-          'If you import a library that uses <code>@NonRestartableComposable</code>, KetoyVM 0.4 will correctly mark the function as non-restartable in metadata, but our optimizer does <em>not</em> yet honor the annotation during inlining. Tracked as <strong>KET-0412</strong>. Workaround: <code>-Xketoy-no-inline-nonrestartable</code>.',
+          'If you import a library that uses <code>@NonRestartableComposable</code>, KetoyVM 0.1 will correctly mark the function as non-restartable in metadata, but our optimizer does <em>not</em> yet honor the annotation during inlining. Tracked as <strong>KET-0412</strong>. Workaround: <code>-Xketoy-no-inline-nonrestartable</code>.',
       },
       {
         type: 'heading',
@@ -785,7 +785,7 @@ export const blogs: Blog[] = [
       {
         type: 'paragraph',
         html:
-          'The flow was a new checkout screen. The bundle was 184 KB. It ran for 21 days, received four updates, and reverted once. No crashes attributable to the runtime. One performance regression we fixed in v0.4.',
+          'The flow was a new checkout screen. The bundle was 184 KB. It ran for 21 days, received four updates, and reverted once. No crashes attributable to the runtime. One performance regression we fixed in v0.1.',
       },
       {
         type: 'callout',
