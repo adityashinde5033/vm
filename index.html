@@ -3,11 +3,108 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>KetoyVM — Ship Kotlin. Rewrite anytime.</title>
+<title>KetoyVM · Server-Driven UI Runtime for Android · Ship Kotlin, Update in Seconds</title>
+<meta name="description" content="KetoyVM is a Kotlin execution runtime for Android that lets you ship Jetpack Compose, coroutines, ViewModels, Hilt, Room and Navigation inside a .ktx bundle. Push app updates over-the-air to every device in 60 seconds — no Play Store round-trip, no DSL, no schema. The Hermes of Kotlin and Compose." />
+<meta name="keywords" content="KetoyVM, Ketoy VM, Server Driven UI, Server-Driven UI Android, Remote Compose, Jetpack Compose runtime, Kotlin execution runtime, Android code push, OTA Android updates, ship app updates in seconds, ship app updates quickly, skip Play Store review, Android over the air updates, Compose over the air, Kotlin bundle, .ktx bundle, Ketoy Bytecode, KBC, Hermes for Kotlin, React Native alternative Android, mobile code push, instant app updates, CodePush Kotlin, SDUI, server driven UI framework, Kotlin DSL free, Android runtime, Android CI CD, continuous delivery Android, hot reload Android, feature flags Android, remote rendering Android, Jetpack Compose server driven" />
+<meta name="author" content="KetoyVM" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<meta name="googlebot" content="index, follow" />
+<meta name="bingbot" content="index, follow" />
+<meta name="theme-color" content="#08090a" />
+<meta name="application-name" content="KetoyVM" />
+<link rel="canonical" href="https://ketoyvm.com/" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="KetoyVM" />
+<meta property="og:title" content="KetoyVM · Server-Driven UI Runtime for Android" />
+<meta property="og:description" content="Ship plain Kotlin. Jetpack Compose, coroutines, ViewModels, Hilt, Room, Navigation — inside a .ktx bundle. Push updates to every Android device in 60 seconds. No Play Store. No DSL." />
+<meta property="og:url" content="https://ketoyvm.com/" />
+<meta property="og:image" content="https://ketoyvm.com/assets/vol-img.png" />
+<meta property="og:image:alt" content="KetoyVM — a Kotlin execution runtime for Android, named for a volcanic island in the Kurils" />
+<meta property="og:locale" content="en_US" />
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="KetoyVM · Server-Driven UI Runtime for Android" />
+<meta name="twitter:description" content="Ship plain Kotlin, update every Android device in 60 seconds. Full Jetpack Compose, Coroutines, Hilt, Room — delivered as a .ktx bundle. No Play Store round-trip." />
+<meta name="twitter:image" content="https://ketoyvm.com/assets/vol-img.png" />
+<meta name="twitter:image:alt" content="KetoyVM — Kotlin execution runtime for Android" />
+
 <link rel="icon" href="assets/ketoy_logo.png" />
+<link rel="apple-touch-icon" href="assets/ketoy_logo.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- JSON-LD structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "KetoyVM",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Android",
+      "description": "KetoyVM is a Kotlin execution runtime for Android. It lets teams ship Jetpack Compose, Coroutines, ViewModels, Hilt, Room and Navigation over-the-air as a .ktx bundle — updating every device in about 60 seconds without a Play Store release.",
+      "url": "https://ketoyvm.com/",
+      "image": "https://ketoyvm.com/assets/vol-img.png",
+      "softwareVersion": "0.4",
+      "keywords": "KetoyVM, Server Driven UI, Remote Compose, Kotlin runtime, Android OTA updates, Jetpack Compose, code push, Ketoy Bytecode, .ktx bundle",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/PreOrder"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Ketoy",
+        "url": "https://ketoy.dev",
+        "email": "support@ketoy.dev"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is KetoyVM?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "KetoyVM is a Kotlin execution runtime for Android that runs Ketoy Bytecode compiled from plain Kotlin source — Jetpack Compose, coroutines, ViewModels, Hilt, Room and Navigation — delivered as a .ktx bundle."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I ship Android app updates in seconds?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Write Kotlin, run ./gradlew ketoyBundle, upload the resulting .ktx to Ketoy Cloud, and the KetoyRuntime on every device fetches and executes the new bundle in about 60 seconds — no Play Store review, no binary split."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is KetoyVM a server-driven UI framework?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "KetoyVM is stronger than a server-driven UI DSL: it executes real Kotlin on device with native Jetpack Compose rendering, real coroutine semantics and real ViewModel lifecycles — so you keep full-surface Compose without a custom schema."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this like CodePush or Hermes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "What Hermes is to React Native's JavaScript, KetoyVM is to Kotlin and Compose — a purpose-built execution runtime, not a script interpreter wedged into a different stack."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 <style>
   :root{
     --bg:#08090a;
@@ -79,10 +176,12 @@
 
   /* Hero */
   .hero{
-    position:relative;min-height:100vh;padding:140px 28px 80px;
-    display:flex;flex-direction:column;justify-content:space-between;
+    position:relative;min-height:100vh;padding:110px 28px 80px;
+    display:flex;flex-direction:column;justify-content:center;
     overflow:hidden;
   }
+  .hero-top{margin-bottom:auto}
+  .hero-foot{margin-top:auto}
   .hero-bg{position:absolute;inset:0;z-index:0;overflow:hidden}
   .hero-bg .photo{
     position:absolute;inset:0;
@@ -122,7 +221,7 @@
   .alpha-badge .dot{background:var(--moss-2);box-shadow:0 0 10px var(--moss-2)}
   .coords{font-family:var(--mono);font-size:11px;color:var(--ink-mute);text-align:right;line-height:1.7}
 
-  .hero-center{position:relative;z-index:3;max-width:1100px;margin:60px auto 0;text-align:center}
+  .hero-center{position:relative;z-index:3;max-width:1100px;margin:-4vh auto 0;text-align:center}
   .hero h1{
     font-family:var(--serif);font-weight:400;
     font-size:clamp(56px, 9vw, 132px);
@@ -146,7 +245,7 @@
   .btn .arrow{transition:transform .2s}
   .btn:hover .arrow{transform:translateX(3px)}
 
-  .hero-foot{position:relative;z-index:3;display:flex;justify-content:space-between;align-items:flex-end;margin-top:80px;gap:40px;flex-wrap:wrap}
+  .hero-foot{position:relative;z-index:3;display:flex;justify-content:space-between;align-items:flex-end;margin-top:auto;gap:40px;flex-wrap:wrap}
   .foot-stat{display:flex;flex-direction:column;gap:4px}
   .foot-stat .k{font-family:var(--mono);font-size:11px;color:var(--ink-mute);letter-spacing:0.1em;text-transform:uppercase}
   .foot-stat .v{font-family:var(--serif);font-size:28px;color:var(--ink)}
@@ -308,6 +407,28 @@
   .wl-status.err{color:var(--ember-2)}
   .wl-status.ok{color:var(--moss-2)}
   .cta-meta{margin-top:24px;font-family:var(--mono);font-size:11px;color:var(--ink-mute);letter-spacing:0.12em;text-transform:uppercase}
+  .cta-divider{
+    display:flex;align-items:center;justify-content:center;gap:14px;
+    max-width:520px;margin:22px auto 18px;
+    font-family:var(--mono);font-size:10px;letter-spacing:0.2em;color:var(--ink-mute);
+  }
+  .cta-divider::before,.cta-divider::after{
+    content:"";flex:1;height:1px;background:var(--line-2);
+  }
+  .book-call{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:13px 22px;border-radius:999px;border:1px solid var(--moss);
+    background:rgba(90,109,82,0.08);color:var(--ink);
+    font-family:var(--mono);font-size:13px;letter-spacing:0.02em;
+    transition:all .2s ease;cursor:pointer;
+  }
+  .book-call:hover{border-color:var(--moss-2);background:rgba(90,109,82,0.16);color:var(--ink)}
+  .book-call .book-dot{
+    width:8px;height:8px;border-radius:50%;background:var(--moss-2);
+    box-shadow:0 0 10px var(--moss-2);
+  }
+  .book-call .arrow{transition:transform .2s}
+  .book-call:hover .arrow{transform:translateX(3px)}
 
   /* Footer */
   footer{padding:60px 28px 40px;max-width:1320px;margin:0 auto;border-top:1px solid var(--line);display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
@@ -487,7 +608,7 @@
   <div class="features">
     <div class="feat">
       <div class="tag">UI</div>
-      <h4>Jetpack Compose — full surface</h4>
+      <h4>Jetpack Compose, full surface</h4>
       <p>Every composable. Every modifier. Every parameter. Rendered natively by the platform, not re-implemented.</p>
       <div class="sym">NATIVE COMPOSE</div>
     </div>
@@ -505,7 +626,7 @@
     </div>
     <div class="feat">
       <div class="tag">Data</div>
-      <h4>Room — reactive queries included</h4>
+      <h4>Room with reactive queries included</h4>
       <p>Flow-returning DAOs, transactions, migrations. The runtime understands Room semantics and honors them.</p>
       <div class="sym">ROOM · FLOW&lt;T&gt;</div>
     </div>
@@ -517,7 +638,7 @@
     </div>
     <div class="feat">
       <div class="tag">Navigation</div>
-      <h4>NavController — every destination</h4>
+      <h4>NavController for every destination</h4>
       <p>Typed routes, deep links, back-stack, animated transitions. Your nav graph ships inside the bundle.</p>
       <div class="sym">NAV · BACKSTACK</div>
     </div>
@@ -685,6 +806,12 @@
       </div>
       <div class="wl-status" id="wl-status"></div>
     </form>
+    <div class="cta-divider" role="separator" aria-label="or"><span>OR</span></div>
+    <a href="https://calendar.app.google/U8oLuX3kXpps55vYA" target="_blank" rel="noopener" class="btn book-call">
+      <span class="book-dot" aria-hidden="true"></span>
+      Book a call with the team
+      <span class="arrow">→</span>
+    </a>
     <div class="cta-meta" id="wl-meta">NO SPAM · ONE EMAIL WHEN YOUR SLOT OPENS</div>
   </div>
 </section>
@@ -722,7 +849,7 @@
       <li><a href="#">GitHub</a></li>
       <li><a href="#">X / Twitter</a></li>
       <li><a href="#">Discord</a></li>
-      <li><a href="/cdn-cgi/l/email-protection#7b13123b101e0f1402551f1e0d"><span class="__cf_email__" data-cfemail="f19998b19a94859e88df959487">[email&#160;protected]</span></a></li>
+      <li><a href="mailto:support@ketoy.dev">support@ketoy.dev</a></li>
     </ul>
   </div>
   <div class="footbar">
@@ -731,7 +858,7 @@
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   (function(){
     const emailEl = document.getElementById('wl-email');
     const nameEl = document.getElementById('wl-name');
