@@ -87,9 +87,36 @@ a { color: inherit; text-decoration: none; }
 .brand img { width: 24px; height: 24px; filter: invert(1); }
 .brand .name { font-family: var(--serif); font-size: 20px; letter-spacing: 0.01em; }
 .brand .name em { font-style: italic; color: var(--moss-2); }
-.nav-links { display: flex; gap: 28px; font-size: 13px; color: var(--ink-dim); }
-.nav-links a:hover,
+.nav-links {
+  display: flex;
+  gap: 28px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--ink-dim);
+}
+.nav-links a {
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.2s;
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background: linear-gradient(90deg, var(--ember), var(--ember-2));
+  border-radius: 1px;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.nav-links a:hover { color: var(--ink); }
+.nav-links a:hover::after { transform: scaleX(0.6); }
 .nav-links a.active { color: var(--ink); }
+.nav-links a.active::after { transform: scaleX(1); }
 .nav-cta { display: flex; align-items: center; gap: 14px; }
 
 .pill {
