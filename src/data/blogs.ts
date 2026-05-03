@@ -1,4 +1,5 @@
 import type { AdjacentBlog, Blog, BlogSummary } from './types';
+import { KETOYVM_VERSION, KETOYVM_VERSION_TAG } from './site';
 
 const anya = {
   name: 'Anya Voronova',
@@ -545,7 +546,7 @@ export const blogs: Blog[] = [
         type: 'table',
         caption: 'TABLE 01 · BENCHMARKS · PIXEL 6 · AOSP 15',
         captionNote: 'N = 1,000 RUNS',
-        headers: ['Metric', 'JVM class files', 'KBC v0.3', 'KBC v0.1', 'Δ'],
+        headers: ['Metric', 'JVM class files', 'KBC v0.3', `KBC ${KETOYVM_VERSION_TAG}`, 'Δ'],
         rows: [
           [{ text: 'Bundle size (gzip)' }, { text: '612 KB' }, { text: '284 KB' }, { text: '218 KB', numeric: true }, { text: '−64%', numeric: true }],
           [{ text: 'Parse + verify' }, { text: '168 ms' }, { text: '44 ms' }, { text: '21 ms', numeric: true }, { text: '−87%', numeric: true }],
@@ -597,7 +598,7 @@ export const blogs: Blog[] = [
         type: 'callout',
         tag: 'KNOWN ISSUE',
         html:
-          'If you import a library that uses <code>@NonRestartableComposable</code>, KetoyVM 0.1 will correctly mark the function as non-restartable in metadata, but our optimizer does <em>not</em> yet honor the annotation during inlining. Tracked as <strong>KET-0412</strong>. Workaround: <code>-Xketoy-no-inline-nonrestartable</code>.',
+          `If you import a library that uses <code>@NonRestartableComposable</code>, KetoyVM ${KETOYVM_VERSION} will correctly mark the function as non-restartable in metadata, but our optimizer does <em>not</em> yet honor the annotation during inlining. Tracked as <strong>KET-0412</strong>. Workaround: <code>-Xketoy-no-inline-nonrestartable</code>.`,
       },
       {
         type: 'heading',
@@ -786,7 +787,7 @@ export const blogs: Blog[] = [
       {
         type: 'paragraph',
         html:
-          'The flow was a new checkout screen. The bundle was 184 KB. It ran for 21 days, received four updates, and reverted once. No crashes attributable to the runtime. One performance regression we fixed in v0.1.',
+          `The flow was a new checkout screen. The bundle was 184 KB. It ran for 21 days, received four updates, and reverted once. No crashes attributable to the runtime. One performance regression we fixed in ${KETOYVM_VERSION_TAG}.`,
       },
       {
         type: 'callout',

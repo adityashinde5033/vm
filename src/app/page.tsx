@@ -3,6 +3,7 @@ import Footer from '@/components/Footer';
 import WaitlistForm from '@/components/WaitlistForm';
 import HeroMarkers from '@/components/HeroMarkers';
 import ScrollReveal from '@/components/ScrollReveal';
+import { KETOYVM_STAGE, KETOYVM_VERSION_TAG } from '@/data/site';
 import styles from './home.module.css';
 
 const codeSample = [
@@ -88,7 +89,7 @@ export default function HomePage() {
         <div className={styles.heroFoot}>
           <div className={styles.footStat}>
             <span className={styles.k}>Runtime</span>
-            <span className={styles.v}>KetoyVM <em className="serif" style={{ color: 'var(--moss-2)' }}>v0.1</em></span>
+            <span className={styles.v}>KetoyVM <em className="serif" style={{ color: 'var(--moss-2)' }}>{KETOYVM_VERSION_TAG}</em></span>
           </div>
           <div className={styles.footStat}>
             <span className={styles.k}>Bytecode</span>
@@ -324,7 +325,7 @@ export default function HomePage() {
           <div className={styles.islandCard} data-reveal="island-card">
             <div className={styles.top}>
               <div className="eyebrow">THE RUNTIME</div>
-              <h3>KetoyVM <em>v0.1 · Alpha</em></h3>
+              <h3>KetoyVM <em>{KETOYVM_VERSION_TAG} · {KETOYVM_STAGE}</em></h3>
               <p>A Kotlin program execution runtime for Android. Like Hermes to React Native&apos;s JavaScript, KetoyVM is built for Kotlin and Compose. Compiler plugin lowers your source to KBC. Host app loads the <span className="mono">.ktx</span> bundle. Runtime executes.</p>
             </div>
             <div className={styles.bottom}>

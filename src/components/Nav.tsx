@@ -62,7 +62,7 @@ export default function Nav() {
           <span className="dot pulse" />
           ALPHA
         </span>
-        <a href="/#waitlist" className="pill solid">Join waitlist →</a>
+        <a href="/#waitlist" className="pill solid">Early Access →</a>
       </div>
     </nav>
   );

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { KETOYVM_STAGE, KETOYVM_VERSION } from '@/data/site';
 
 type Variant = 'landing' | 'blog';
 
@@ -54,7 +55,7 @@ export default function Footer({ variant = 'landing' }: Props) {
         <div>
           <h5>Program</h5>
           <ul>
-            <li><a href="/#waitlist">Waitlist</a></li>
+            <li><a href="/#waitlist">Early Access</a></li>
             <li><a href="#">Alpha cohort</a></li>
             <li><a href="#">Changelog</a></li>
             <li><a href="#">Status</a></li>
@@ -75,7 +76,7 @@ export default function Footer({ variant = 'landing' }: Props) {
       <div>
         <h5>Elsewhere</h5>
         <ul>
-          <li><a href="https://github.com/KetoyDev" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://github.com/KetoyDev/KetoyVM" target="_blank" rel="noopener">GitHub</a></li>
           <li><a href="https://x.com/KetoyDev" target="_blank" rel="noopener">X / Twitter</a></li>
           <li><a href="https://www.linkedin.com/company/ketoy" target="_blank" rel="noopener">LinkedIn</a></li>
           <li><a href="mailto:support@ketoy.dev">support@ketoy.dev</a></li>
@@ -83,7 +84,7 @@ export default function Footer({ variant = 'landing' }: Props) {
       </div>
 
       <div className="footbar">
-        <div>© 2026 KetoyVM · Alpha 0.1</div>
+        <div>© 2026 KetoyVM · {KETOYVM_STAGE} {KETOYVM_VERSION}</div>
         <div>47°20′N · 152°28′E · SEA OF OKHOTSK</div>
       </div>
     </footer>

@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import { Analytics } from '@vercel/analytics/next';
+import { KETOYVM_VERSION } from '@/data/site';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -73,7 +74,7 @@ const siteJsonLd = {
         'KetoyVM is a Kotlin execution runtime for Android that lets teams ship Jetpack Compose, Coroutines, ViewModels, and Navigation over-the-air as a .ktx bundle, updating every device in about 60 seconds without a Play Store release. Hilt and Room stay in the host app; KetoyVM exposes their functions for new features because updating them requires a Play Store release.',
       url: 'https://vm.ketoy.dev/',
       image: 'https://vm.ketoy.dev/assets/vol-img.png',
-      softwareVersion: '0.1',
+      softwareVersion: KETOYVM_VERSION,
       keywords:
         'KetoyVM, Server Driven UI, Remote Compose, Kotlin runtime, Android OTA updates, Jetpack Compose, code push, Ketoy Bytecode, .ktx bundle',
       offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD', availability: 'https://schema.org/PreOrder' },
