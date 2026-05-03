@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     template: '%s · KetoyVM',
   },
   description:
-    'KetoyVM is a Kotlin execution runtime for Android that lets you ship Jetpack Compose, coroutines, ViewModels, Hilt, Room and Navigation inside a .ktx bundle. Push app updates over-the-air to every device in 60 seconds without Play Store round-trip, DSL, or schema. The Hermes of Kotlin and Compose.',
+    'KetoyVM is a Kotlin execution runtime for Android that lets you ship Jetpack Compose, coroutines, ViewModels, and Navigation inside a .ktx bundle. Hilt and Room stay in the host app; KetoyVM exposes their functions for new features because updating them requires a Play Store release. Push app updates over-the-air to every device in 60 seconds without Play Store round-trip, DSL, or schema. The Hermes of Kotlin and Compose.',
   keywords: [
     'KetoyVM', 'Ketoy VM', 'Server Driven UI', 'Server-Driven UI Android', 'Remote Compose',
     'Jetpack Compose runtime', 'Kotlin execution runtime', 'Android code push', 'OTA Android updates',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     siteName: 'KetoyVM',
     title: 'KetoyVM · Server-Driven UI Runtime for Android',
     description:
-      'Ship plain Kotlin with Jetpack Compose, coroutines, ViewModels, Hilt, Room, and Navigation inside a .ktx bundle. Push updates to every Android device in 60 seconds. No Play Store. No DSL.',
+      'Ship plain Kotlin with Jetpack Compose, coroutines, ViewModels, and Navigation inside a .ktx bundle. Hilt and Room stay in the host app; KetoyVM exposes their functions for new features because updating them requires a Play Store release. Push updates to every Android device in 60 seconds. No Play Store. No DSL.',
     url: 'https://vm.ketoy.dev/',
     images: [{
       url: 'https://vm.ketoy.dev/assets/vol-img.png',
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'KetoyVM · Server-Driven UI Runtime for Android',
     description:
-      'Ship plain Kotlin, update every Android device in 60 seconds. Full Jetpack Compose, Coroutines, Hilt, Room delivered as a .ktx bundle. No Play Store round-trip.',
+      'Ship plain Kotlin, update every Android device in 60 seconds. Full Jetpack Compose and Coroutines in a .ktx bundle; Hilt and Room stay in the host app and are exposed for new features because updates require a Play Store release. No Play Store round-trip.',
     images: [{ url: 'https://vm.ketoy.dev/assets/vol-img.png', alt: 'KetoyVM: Kotlin execution runtime for Android' }],
   },
   icons: {
@@ -70,7 +70,7 @@ const siteJsonLd = {
       applicationCategory: 'DeveloperApplication',
       operatingSystem: 'Android',
       description:
-        'KetoyVM is a Kotlin execution runtime for Android that lets teams ship Jetpack Compose, Coroutines, ViewModels, Hilt, Room and Navigation over-the-air as a .ktx bundle, updating every device in about 60 seconds without a Play Store release.',
+        'KetoyVM is a Kotlin execution runtime for Android that lets teams ship Jetpack Compose, Coroutines, ViewModels, and Navigation over-the-air as a .ktx bundle, updating every device in about 60 seconds without a Play Store release. Hilt and Room stay in the host app; KetoyVM exposes their functions for new features because updating them requires a Play Store release.',
       url: 'https://vm.ketoy.dev/',
       image: 'https://vm.ketoy.dev/assets/vol-img.png',
       softwareVersion: '0.1',
@@ -87,7 +87,7 @@ const siteJsonLd = {
           name: 'What is KetoyVM?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'KetoyVM is a Kotlin execution runtime for Android that runs Ketoy Bytecode compiled from plain Kotlin source, including Jetpack Compose, coroutines, ViewModels, Hilt, Room and Navigation, delivered as a .ktx bundle.',
+            text: 'KetoyVM is a Kotlin execution runtime for Android that runs Ketoy Bytecode compiled from plain Kotlin source, including Jetpack Compose, coroutines, ViewModels, and Navigation, delivered as a .ktx bundle. Hilt and Room stay in the host app; KetoyVM exposes their functions for new features because updating them requires a Play Store release.',
           },
         },
         {

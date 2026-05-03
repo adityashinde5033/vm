@@ -43,9 +43,9 @@ export const blogs: Blog[] = [
     dispatch: 25,
     title: 'Android apps that can be <em>rewritten</em> anytime.',
     excerpt:
-      'KetoyVM is a Kotlin runtime for Android. Write plain Compose, ViewModels, Hilt, Room, and Navigation. Ship it to a CDN. Every user has the new feature in 60 seconds.',
+      'KetoyVM is a Kotlin runtime for Android. Write plain Compose, ViewModels, and Navigation. Hilt and Room stay in the host app; KetoyVM exposes their functions for new features because updating them requires a Play Store release. Ship it to a CDN. Every user has the new feature in 60 seconds.',
     dek:
-      'KetoyVM is a Kotlin runtime for Android. Write plain Compose, ViewModels, Hilt, Room, and Navigation, the whole stack. Ship it to a CDN. Every user has the new feature within 60 seconds.',
+      'KetoyVM is a Kotlin runtime for Android. Write plain Compose, ViewModels, and Navigation, the whole stack. Hilt and Room stay in the host app; KetoyVM exposes their functions for new features because updating them requires a Play Store release. Ship it to a CDN. Every user has the new feature within 60 seconds.',
     date: '2026-04-23',
     dateLabel: 'APR 23 · 2026',
     readingTime: '18 MIN',
@@ -61,7 +61,7 @@ export const blogs: Blog[] = [
       {
         type: 'lede',
         html:
-          'Today we are introducing KetoyVM, a Kotlin program execution runtime for Android. You write the same Jetpack Compose you write today, full composables, full ViewModels, full Hilt injection, Room reactive queries, NavController navigation, coroutines and Flow, and you ship it as a binary bundle from your server. Your host app downloads a <code>.ktx</code> file and the KetoyVM runtime executes it natively inside your app. Real Compose. Real structured concurrency. Real Room queries. Real navigation. Nothing is translated. Nothing is simulated.',
+          'Today we are introducing KetoyVM, a Kotlin program execution runtime for Android. You write the same Jetpack Compose you write today, full composables, full ViewModels, Hilt and Room functions exposed by the host app (updates still require a Play Store release), NavController navigation, coroutines and Flow, and you ship it as a binary bundle from your server. Your host app downloads a <code>.ktx</code> file and the KetoyVM runtime executes it natively inside your app. Real Compose. Real structured concurrency. Real Room queries. Real navigation. Nothing is translated. Nothing is simulated.',
       },
       {
         type: 'pull',
@@ -81,7 +81,7 @@ export const blogs: Blog[] = [
       {
         type: 'paragraph',
         html:
-          'The important thing to understand is that this is not a UI templating system. The whole Kotlin/Android stack you rely on is inside the bundle. A screen is not a tree of components, it is a program. It has state. It has a ViewModel. It injects a repository through Hilt. It calls a Retrofit API and observes a Room <code>Flow</code>. It navigates to another screen. It uses <code>LaunchedEffect</code>, <code>remember</code>, <code>derivedStateOf</code>, <code>rememberSaveable</code>. All of that ships in the bundle. All of that runs on the device.',
+          'The important thing to understand is that this is not a UI templating system. The whole Kotlin/Android stack you rely on is inside the bundle. A screen is not a tree of components, it is a program. It has state. It has a ViewModel. It injects a repository through host-exposed Hilt functions. It calls a Retrofit API and observes a Room <code>Flow</code> exposed by the host app. Hilt and Room themselves are not updated over the air because updating them requires a Play Store release. It navigates to another screen. It uses <code>LaunchedEffect</code>, <code>remember</code>, <code>derivedStateOf</code>, <code>rememberSaveable</code>. All of that ships in the bundle. All of that runs on the device.',
       },
       {
         type: 'paragraph',
@@ -147,7 +147,7 @@ export const blogs: Blog[] = [
       {
         type: 'paragraph',
         html:
-          "There is nothing KetoyVM-specific in that code except the <code>@KetoyEntryPoint</code> annotation that marks which composable is the bundle's entry. The <code>@HiltViewModel</code> is real Hilt. <code>userDao.observeCurrent()</code> returns a real <code>Flow&lt;User?&gt;</code> from Room. <code>viewModelScope.launch</code> is real structured concurrency. <code>nav.navigate(\"home\")</code> is a real NavController call. The developer does not learn a new framework. The developer writes Android.",
+          "There is nothing KetoyVM-specific in that code except the <code>@KetoyEntryPoint</code> annotation that marks which composable is the bundle's entry. The <code>@HiltViewModel</code> still uses the host app's Hilt graph. <code>userDao.observeCurrent()</code> returns a real <code>Flow&lt;User?&gt;</code> from the host app's Room. KetoyVM does not update Hilt or Room; it exposes their functions for new features because updating them requires a Play Store release. <code>viewModelScope.launch</code> is real structured concurrency. <code>nav.navigate(\"home\")</code> is a real NavController call. The developer does not learn a new framework. The developer writes Android.",
       },
 
       {
@@ -174,11 +174,11 @@ export const blogs: Blog[] = [
           },
           {
             name: 'Hilt',
-            html: "Host app exposes a <code>KetoyCapabilityProvider</code>. Your bundle's <code>@HiltViewModel</code> classes get repositories, services, and DAOs injected exactly as they would natively.",
+            html: "Host app exposes a <code>KetoyCapabilityProvider</code>. Your bundle's <code>@HiltViewModel</code> classes get repositories, services, and DAOs injected exactly as they would natively. Hilt stays in the host app; KetoyVM does not update Hilt because updates require a Play Store release.",
           },
           {
             name: 'Room',
-            html: 'DAO methods exposed as Flow capabilities. A <code>Flow&lt;List&lt;User&gt;&gt;</code> crosses into KBC as a real <code>Flow</code> and connects to Compose via <code>collectAsState</code>.',
+            html: 'DAO methods exposed as Flow capabilities. A <code>Flow&lt;List&lt;User&gt;&gt;</code> crosses into KBC as a real <code>Flow</code> and connects to Compose via <code>collectAsState</code>. Room stays in the host app; KetoyVM does not update Room because updates require a Play Store release.',
           },
           {
             name: 'Coroutines & Flow',
@@ -201,7 +201,7 @@ export const blogs: Blog[] = [
       {
         type: 'paragraph',
         html:
-          'This is why we keep saying <em>programs</em> instead of <em>layouts</em>. When you ship a KetoyVM bundle, you are not patching the UI and leaving the logic stuck at the last Play Store version. You are replacing the feature end-to-end. A new onboarding flow. A new ViewModel with a new signup path. A new Hilt-injected dependency. A change to the Room query that drives the home screen. All of it in one file.',
+          'This is why we keep saying <em>programs</em> instead of <em>layouts</em>. When you ship a KetoyVM bundle, you are not patching the UI and leaving the logic stuck at the last Play Store version. You are replacing the feature end-to-end. A new onboarding flow. A new ViewModel with a new signup path. A new host-exposed dependency. A change to the host-exposed Room query that drives the home screen. Hilt and Room stay in the host app; KetoyVM exposes their functions for new features because updating them requires a Play Store release. All of it in one file.',
       },
 
       {
@@ -298,7 +298,7 @@ export const blogs: Blog[] = [
       {
         type: 'paragraph',
         html:
-          'The second-order effect is even better. Because shipping is cheap, <em>you ship more</em>. An experiment that would not have justified the fixed cost of a release now justifies a bundle upload. A copy change a PM has been asking about for three weeks goes out in ten minutes. A Room query that is slow for power users gets patched on Tuesday instead of in the next release. Twenty updates a year becomes forty, then sixty, without adding engineers, because the engineers you already have stop waiting.',
+          'The second-order effect is even better. Because shipping is cheap, <em>you ship more</em>. An experiment that would not have justified the fixed cost of a release now justifies a bundle upload. A copy change a PM has been asking about for three weeks goes out in ten minutes. A host-exposed Room query that is slow for power users gets patched on Tuesday instead of in the next release. Twenty updates a year becomes forty, then sixty, without adding engineers, because the engineers you already have stop waiting.',
       },
 
       {
@@ -317,7 +317,7 @@ export const blogs: Blog[] = [
       {
         type: 'paragraph',
         html:
-          "A KetoyVM bundle is a feature. If you change your ViewModel, your Hilt graph, your Room query, your navigation flow, or your Compose tree, all of it goes out in the same <code>.ktx</code>. The only thing you cannot change over the air is the host app's set of registered capabilities, the Android APIs the bundle is allowed to call, and in practice those stabilize early in a project and rarely change. Everything else ships from CDN.",
+          "A KetoyVM bundle is a feature. If you change your ViewModel, the Hilt- or Room-backed calls exposed by the host app, your navigation flow, or your Compose tree, all of it goes out in the same <code>.ktx</code>. Hilt and Room themselves stay in the host app; KetoyVM exposes their functions for new features because updating them requires a Play Store release. The only thing you cannot change over the air is the host app's set of registered capabilities, the Android APIs the bundle is allowed to call, and in practice those stabilize early in a project and rarely change. Everything else ships from CDN.",
       },
 
       { type: 'heading', level: 3, html: 'Faster sprints, because "done" actually means "shipped"' },

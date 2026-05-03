@@ -74,7 +74,7 @@ export default function HomePage() {
             <em>Rewrite</em> <span className={styles.ember}>anytime.</span>
           </h1>
           <p className={styles.heroSub}>
-            KetoyVM executes plain Kotlin with full Jetpack Compose, coroutines, ViewModels, Hilt, Room, and Navigation inside a{' '}
+            KetoyVM executes plain Kotlin with full Jetpack Compose, coroutines, ViewModels, and Navigation inside a{' '}
             <span className="mono" style={{ color: 'var(--ember-2)' }}>.ktx</span> bundle. Push a new build to every device in 60 seconds. No Play Store round-trip. No DSL. No schema.
           </p>
           <div className={styles.heroCta}>
@@ -112,8 +112,6 @@ export default function HomePage() {
             Compose <em>composables</em> <i className={styles.sep}>◆</i>
             Coroutines <em>suspending</em> <i className={styles.sep}>◆</i>
             ViewModels <em>lifecycles</em> <i className={styles.sep}>◆</i>
-            Room <em>reactive</em> <i className={styles.sep}>◆</i>
-            Hilt <em>injected</em> <i className={styles.sep}>◆</i>
             Navigation <em>controllers</em> <i className={styles.sep}>◆</i>
             Retrofit <em>APIs</em> <i className={styles.sep}>◆</i>
           </span>
@@ -121,8 +119,6 @@ export default function HomePage() {
             Compose <em>composables</em> <i className={styles.sep}>◆</i>
             Coroutines <em>suspending</em> <i className={styles.sep}>◆</i>
             ViewModels <em>lifecycles</em> <i className={styles.sep}>◆</i>
-            Room <em>reactive</em> <i className={styles.sep}>◆</i>
-            Hilt <em>injected</em> <i className={styles.sep}>◆</i>
             Navigation <em>controllers</em> <i className={styles.sep}>◆</i>
             Retrofit <em>APIs</em> <i className={styles.sep}>◆</i>
           </span>
@@ -146,7 +142,7 @@ export default function HomePage() {
           <div className={styles.flowStep} data-reveal="flow-step">
             <div className={styles.idx}>STEP 01</div>
             <h3>Author</h3>
-            <p>Write <span className="mono">CheckoutScreen.kt</span> with a LazyColumn, a ViewModel, Retrofit calls, and Hilt repositories. Exactly the Kotlin you&apos;d write today.</p>
+            <p>Write <span className="mono">CheckoutScreen.kt</span> with a LazyColumn, a ViewModel, Retrofit calls, and host-exposed repositories. Exactly the Kotlin you&apos;d write today.</p>
             <div className={styles.glyph}>→ CheckoutScreen.kt</div>
           </div>
           <div className={styles.flowStep} data-reveal="flow-step">
@@ -164,7 +160,7 @@ export default function HomePage() {
           <div className={styles.flowStep} data-reveal="flow-step">
             <div className={styles.idx}>STEP 04</div>
             <h3>Execute</h3>
-            <p>The host app pulls the bundle. KetoyRuntime executes it natively with every Compose parameter, every coroutine scope, and every Room query in under 60s.</p>
+            <p>The host app pulls the bundle. KetoyRuntime executes it natively with every Compose parameter, every coroutine scope, and every host-exposed query in under 60s.</p>
             <div className={styles.glyph}>→ KetoyRuntime.load()</div>
           </div>
         </div>
@@ -204,14 +200,14 @@ export default function HomePage() {
           </div>
           <div className={styles.feat} data-reveal="feat">
             <div className={styles.featTag}>Data</div>
-            <h4>Room with reactive queries included</h4>
-            <p>Flow-returning DAOs, transactions, migrations. The runtime understands Room semantics and honors them.</p>
+            <h4>Room functions, exposed by the host</h4>
+            <p>Flow-returning DAOs. KetoyVM does not update Room; it exposes your app&apos;s Room functions for new features. Room updates require a Play Store release.</p>
             <div className={styles.sym}>ROOM · FLOW&lt;T&gt;</div>
           </div>
           <div className={styles.feat} data-reveal="feat">
             <div className={styles.featTag}>DI</div>
-            <h4>Hilt injection, at the edges</h4>
-            <p>Inject repositories, clients, data sources into composables and ViewModels. Scoped, graph-resolved, real Hilt.</p>
+            <h4>Hilt functions, exposed by the host</h4>
+            <p>Inject repositories, clients, data sources into composables and ViewModels through the host app. KetoyVM does not update Hilt; it exposes Hilt-provided functions. Hilt updates require a Play Store release.</p>
             <div className={styles.sym}>HILT · @Inject</div>
           </div>
           <div className={styles.feat} data-reveal="feat">
